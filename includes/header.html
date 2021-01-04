@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="includes\styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+<header>
+  <h1 id="title">MyLibrary</h1>
+  <div id="navbar">
+    <ul>
+      <?php
+        if (isset($_SESSION['user_id'])) { echo '
+      <li><a href="home.php">Home</a></li>
+      <li><a href="insert_book.php">Add Book</a></li>
+      <li><a href="search_books.php">Search Shelf</a></li>
+      <li><a href="all_books.php">View Shelf</a></li>
+      <li>';
+          echo '<a href="logout.php">Logout</a>';
+        } 
+        ?></li>
+    </ul>
+  </div>
+
+</header>
+
+</html>

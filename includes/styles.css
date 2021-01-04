@@ -1,0 +1,315 @@
+/* Color Pallet:
+
+#E3D0D8 Queen Pink
+#AEA3B0 Heliotrope Gray
+#827081 Old Lavender
+#C6D2ED Periwinkle Crayola
+
+*/
+
+/* Global Styles
+----------------------------------------------------*/
+body {
+  background:#E3D0D8; /* Queen Pink */
+  color:#514753;  /* Crisp Serge  */
+  font-family: 'Inconsolata', monospace;
+}
+
+h1, h2 {
+  color:#514753;  /* Crisp Serge  */
+  text-align: center;
+}
+p {
+  color:#514753;  /* Crisp Serge  */
+}
+
+img.center {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+}
+
+/* Header styles
+----------------------------------------------------*/
+
+#title {
+  font-size:70px;
+  margin-top: 0;
+  color:#AEA3B0; /* Heliotrope Gray */
+}
+
+header {
+  background: #827081;  /* Old Lavender */
+  color:#AEA3B0 ;  /* Heliotrope Gray */
+  font-family: 'Inconsolata', monospace;
+}
+
+#title {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#navbar {
+display:inline-block;
+ list-style-type: none;
+ padding:0;
+}
+
+#navbar ul {
+  padding-left: 0;
+}
+
+#navbar li {
+  list-style: none;
+  float:left;
+}
+
+#navbar a {
+  display:inline-block;
+  text-decoration: none;
+  font-size: 40px;
+  padding:10px;
+  color:#E3D0D8;  /* Queen Pink */
+}
+
+#navbar a:hover {
+  color:#AEA3B0; /* Heliotrope Gray */
+}
+
+
+/* Home Page styles
+----------------------------------------------------*/
+
+#information {
+  padding: 10px;
+  background:#C6D2ED; /* Periwinkle Crayola */
+}
+
+#coverDisplay {
+  background:#AEA3B0; /* Heliotrope Gray */
+}
+
+/* Login Page styles
+----------------------------------------------------*/
+
+#signupform form  {
+  width:70%;
+  margin-top:30px;
+  margin-left: auto;
+  margin-right: auto;
+  background:#C6D2ED; /* Periwinkle Crayola */
+  border-style:solid;
+  border-color:#827081; /* Old Lavender */
+}
+
+#loginform form  {
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30px;
+  background:#C6D2ED; /* Periwinkle Crayola */
+  border-style:solid;
+  border-color:#827081; /* Old Lavender */
+}
+
+/* Form styles
+----------------------------------------------------*/
+
+form {
+  padding: 20px;
+  width:45%;
+  margin-top:30px;
+  background:#C6D2ED; /* Periwinkle Crayola */
+  border-style:solid;
+  border-color:#827081; /* Old Lavender */
+}
+
+form.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=text], input[type=password], select {
+  display:block;
+  height:30px;
+  width:200px;
+  margin-bottom: 10px;
+}
+
+label {
+  color:#514753 ; /* Crisp Serge  */
+  font-size:30px;
+  float:left;
+  clear: both;
+  text-align:right;
+  margin-right: 15px;
+}
+
+.button {
+  background-color:#827081; /* Old Lavender */
+  color:white;
+  font-size:25px;
+  margin-top:10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button a {
+  text-decoration: none;
+  color:white;
+  padding:10px;
+}
+
+/* Upload Page Styles
+----------------------------------------------------*/
+
+#book_upload_area {
+  display:inline-block;
+  padding:0px;
+}
+
+#book_upload_area label {
+  display:inline-block;
+  text-align:right;
+  padding-left:0px;
+  font-size: 30px;
+}
+
+#book_upload_area input[type=text] {
+  height:30px;
+  width:200px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Search Results Styles
+----------------------------------------------------*/
+.book_results_container {
+  display: grid;
+  width:50%;
+  grid-template-columns: 280px auto auto auto auto;
+  grid-template-rows: 50px auto;
+  color:#827081; /* Old Lavender */
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 3px solid #514753;  /* Crisp Serge  */
+  border-bottom: 3px solid #514753;  /* Crisp Serge  */
+}
+
+.book_results_container img {
+  width:100%;
+  height:100%;
+}
+
+.book_results_title {
+  font-size:40px;
+  text-align: center;
+  color:#514753;  /* Crisp Serge  */
+  background: #C6D2ED; /* Periwinkle Crayola */
+  border-top: 3px solid #514753; /* Crisp Serge  */
+  border-right: 3px solid #514753; /* Crisp Serge  */
+  border-bottom: 3px solid #514753; /* Crisp Serge  */
+}
+
+.book_results_cell {
+  border-right: 3px solid #514753;  /* Crisp Serge  */
+  text-align: center;
+  font-size: 30px;
+  padding: 5px;
+  background: #C6D2ED; /* Periwinkle Crayola */
+  color:#514753;  /* Crisp Serge  */
+}
+
+.book_results_container img {
+  width:100%;
+  height:100%;
+}
+
+.book_results_empty_title {
+  border-bottom:  3px solid #514753;  /* Crisp Serge  */
+  background: #E3D0D8; /* Queen Pink */
+}
+
+#search_button, #submit_button {
+  margin-left: 40%;
+}
+
+/* Responsive
+---------------------------------------------*/
+
+@media screen and (max-width:1099px) {
+  h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .book_results_container {
+    display: block;
+    width:50%;
+    color:#827081; /* Old Lavender */
+    background: #C6D2ED; /* Periwinkle Crayola */
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+  }
+
+  #insert_book_form {
+    width:80%;
+  }
+}
+
+@media screen and (min-width:1100px) {
+  h1.login {
+    font-size: 80px;
+    text-align: centfrtffgfg mer;
+  }
+
+  h2.login {
+    font-size: 30px;
+  }
+
+  #navbar {
+     display:flex;
+     flex-direction:row;
+     justify-content: center;
+     margin-bottom: 10px;
+     padding:15px;
+   }
+
+ #login_reg_area {
+   display:grid;
+   width: 75%;
+   grid-gap: 10px;
+   margin-left: auto;
+   margin-right: auto;
+   grid-template-columns: 50% 50%;
+   column-gap: 0;
+   justify-content: center;
+ }
+
+ #book_upload_area {
+   display:grid;
+   grid-template-columns: 50% 50%;
+   width:75%;
+   grid-gap: 10px;
+   text-align: right;
+   margin-left: auto;
+   margin-right: auto;
+   align-items: center;
+   padding:0px;
+ }
+
+ #book_upload_area input["type=submit"] {
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+  #book_search_area {
+    display: grid;
+    width:45%;
+    grid-template-columns: 70% 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
