@@ -4,6 +4,7 @@
 #AEA3B0 Heliotrope Gray
 #827081 Old Lavender
 #C6D2ED Periwinkle Crayola
+#514753 Crisp Serge
 
 */
 
@@ -194,7 +195,7 @@ label {
   margin-left: auto;
   margin-right: auto;
   border-left: 3px solid #514753;  /* Crisp Serge  */
-  border-bottom: 3px solid #514753;  /* Crisp Serge  */
+  
 }
 
 .book_results_container img {
@@ -219,6 +220,7 @@ label {
   padding: 5px;
   background: #C6D2ED; /* Periwinkle Crayola */
   color:#514753;  /* Crisp Serge  */
+  border-bottom: 3px solid #514753; /* Crisp Serge  */
 }
 
 .book_results_container img {
