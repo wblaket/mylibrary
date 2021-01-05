@@ -43,25 +43,26 @@
       <div class="book_results_empty_title"></div>';
 
       // Create a new row in the grid and insert the data from the query:
-        while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
+      while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
 
-         echo '<div class="book_results_cell"><img src="' . $row['imageFilePath']. '"></div>
-          <div class="book_results_cell">' . $row['title'] . '</div>
-          <div class="book_results_cell">' . $row['author_fn'] . ' ' . $row['author_ln'] . '</div>
-          <div class="book_results_cell">' . $row['genre'] . '</div>
-          <div class="book_results_cell"><span class="button"><a href="delete_book.inc.php?book_id=' . $row['book_id'] . '">Delete</a></span></div>
-          </div>';
-          mysqli_free_result ($r);
-        }
+       echo '<div class="book_results_cell"><img src="' . $row['imageFilePath']. '"></div>
+        <div class="book_results_cell">' . $row['title'] . '</div>
+        <div class="book_results_cell">' . $row['author_fn'] . ' ' . $row['author_ln'] . '</div>
+        <div class="book_results_cell">' . $row['genre'] . '</div>
+        <div class="book_results_cell"><span class="button"><a href="delete_book.inc.php?book_id=' . $row['book_id'] . '">Delete</a></span></div>
+        </div>';
       }
-    } else {
-          // Print the error messages:
-          echo "An error has occured.";
-          echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
-      }
-      mysqli_close($dbc); // Close database.
+      mysqli_free_result ($r);
+    }
+  } else {
+    // Print the error messages:
+    echo "An error has occured.";
+    echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+  }
+  mysqli_close($dbc); // Close database.
   //Print out error messages:
   } else foreach($errors as $msg) {
       echo "<p>$msg</p>";
   }
+
 ?>
