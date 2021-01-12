@@ -4,7 +4,9 @@ Website built with PHP and MySQL to catalogue your book library.
 ## Table of Contents
 * General Info
 * Technologies 
-* Setup
+* Installation
+* Future
+* Sources
 
 
 ## General Information
@@ -56,7 +58,11 @@ FOREIGN KEY (user_id) REFERENCES users(user_id)  );
 CREATE TABLE users (user_id VARCHAR(20) PRIMARY KEY NOT NULL, user_fn VARCHAR(20) NOT NULL, 
 user_ln VARCHAR(20) NOT NULL, password VARCHAR(20));
 ```
-
+## Future
+Additional updates being planned:
+* I plan on updating the formatting of the tables so that the delete button isn't it's own full column.
+* I'm exploring different options for being upable to update books added to the shelf. It'll either be in the form
+of a seperate webpage or users will be able to update it from the tables themselves.
 
 ## Sources
 This project was partially adapated from the tutorial project from
