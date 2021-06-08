@@ -4,7 +4,7 @@
 
 <?php
   session_start(); // Include sesison information
-  include ('includes\header.html'); // Include page header
+  include ('includes/header.html'); // Include page header
 
   // If there's no active session, redirect user to login page:
   if (!isset($_SESSION['user_id'])) {

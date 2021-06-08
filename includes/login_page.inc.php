@@ -6,8 +6,7 @@
   include ('includes/header.html');
   // Print any error messages:
   if (isset($errors) && !empty($errors)) {
-    echo '<h1>Error!</h1>
-    <h1 class="error">The following error(s) occured:<br />';
+    echo '<h1 class="error">The following error(s) occured:<br />';
     foreach ($errors as $msg) {
       echo " - $msg<br />";
     }

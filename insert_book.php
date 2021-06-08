@@ -36,11 +36,12 @@
             <option value="Classic">Classic</option>
             <option value="Economics">Economics</option>
             <option value="Fantasy">Fantasy</option>
-            <option value="History">Histroy</option>
+            <option value="History">History</option>
             <option value="Horror">Horror</option>
             <option value="Mystery">Mystery</option>
             <option value="Non-fiction">Non-Fiction</option>
             <option value="Politics">Politics</option>
+            <option value="Other">Other</option>
             <option value="Romance">Romance</option>
             <option value="Sci-fi">Sci-Fi</option>
             <option value="Science">Science</option>

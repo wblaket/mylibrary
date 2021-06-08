@@ -34,6 +34,7 @@
 
     // If there are no errors, run a query on the "users" table in the database:
     if (empty($errors)) {
+      $u = strtolower($u);
       $userQuery = "SELECT user_id, user_fn FROM users WHERE user_id ='$u' AND password='$p'";
       $userCheck = @mysqli_query($dbc, $userQuery);
 
@@ -41,7 +42,7 @@
         $row = mysqli_fetch_array ($userCheck, MYSQLI_ASSOC);
         return array(true, $row);
       } else {
-        $errors[] = 'The user and/or password entered do not match those on file.';
+        $errors[] = 'The username and/or password entered do not match those on file.';
       }
     }
     return array(false, $errors);

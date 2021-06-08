@@ -44,6 +44,17 @@
       $genre = trim($_POST['genre']);
     }
 
+    if (strlen($title) > 50) {
+      $errors[] = 'The character limit for book title is 50 characters. Please condense the title if possible.';
+    }
+
+    if (strlen($author_fn) > 30) {
+      $errors[] = 'The character limit for authors first name is 30 characters. Please condense the name if possible.';
+    }
+    if (strlen($author_ln) > 30) {
+      $errors[] = 'The character limit for authors last name is 30 characters. Please condense the title if possible.';
+    }
+
     if (isset($_FILES['upload']) && !empty($_FILES['upload']['tmp_name'])) {
       // Only allow GIFS, JPGS, and PNG images
       $allowed = array ('image/jpeg', 'image/JPG', 'image/PNG', 'image/png', 'image', 'image/GIF', 'image/gif');

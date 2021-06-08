@@ -9,6 +9,9 @@
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require ('includes/mysqli_connect.php'); // create database connection
+    if (!$dbc) {
+      echo '<p>Something went wrong!</p>';
+    }
     // Pull the information from the fields
     $user_id = $_REQUEST['new_user_id'];
     $user_fn = $_REQUEST['new_user_fn'];
@@ -45,6 +48,21 @@
       $errors[] = 'You forgot to enter your password.';
     }
 
+    if (strlen($u) > 20) {
+      $errors[] = 'The character limit for the username is 20 characters. Please enter a shorter username.';
+    }
+
+    if (strlen($p) > 20) {
+      $errors[] = 'The character limit for the password is 20 characters. Please enter a shorter password.';
+    }
+
+    if (strlen($fn) > 30) {
+      $errors[] = 'The character limit for first name is 30 characters.';
+    }
+
+    if (strlen($ln) > 30) {
+      $errors[] = 'The character limit for the password is 30 characters.';
+    }
     // Check and see if the username is already in use:
     $usernameCheck = @mysqli_query($dbc, "SELECT * FROM users WHERE user_id = '$u'");
     if (mysqli_num_rows($usernameCheck) > 0) {
@@ -53,13 +71,14 @@
 
     // If no errors are found, proceed with registering the user into the database.
     if (empty($errors)) {
-
+      $u = strtolower($u);
       $q = "INSERT into users (user_id, user_fn, user_ln, password) VALUES ('$u', '$fn', '$ln', '$p')";
       $r = @mysqli_query($dbc, $q);
 
       // If the insert statement was successful:
       if ($r) {
         echo'<h1>Thank you! You are now registered.</h1>';
+        echo '<h1>You will be redirected back to the home page in 5 seconds</h1>';
         header("Refresh:5; url=home.php");
       } else {
         // Print sql error messages if the book could not be added.
@@ -71,11 +90,11 @@
 
     } else {
       //print error messages
-      echo '<h1>An error has occured:</h1>';
+      echo '<h1 class="error">The following error(s) have occured:<br />';
       foreach ($errors as $msg) {
-          echo "<p>ERROR: $msg<br />\n";
+          echo "Error: $msg<br />\n";
         }
-        echo '</p><p>Click <a href="login.php">here</a> to return to the registration page.';  }
+        echo 'Click <a href="login.php">here</a> to return to the registration page.</h1>';  }
   }
 
  ?>
