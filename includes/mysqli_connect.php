@@ -4,10 +4,10 @@
 
 <?php
 
-  DEFINE ('DB_USER', '');
-  DEFINE ('DB_PASSWORD', '');
-  DEFINE ('DB_HOST', '');
-  DEFINE ('DB_NAME', '');
+  DEFINE ('DB_USER', 'root');
+  DEFINE ('DB_PASSWORD', 'Mchs2014!');
+  DEFINE ('DB_HOST', 'localhost');
+  DEFINE ('DB_NAME', 'mylibrary');
 
   $dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) OR die('Could not connect to MySQL: ' . mysqli_connect_error() );
 
